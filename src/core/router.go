@@ -138,7 +138,7 @@ func initRouters() {
 	beego.Router("/api/registries/:id/info", &api.RegistryAPI{}, "get:GetInfo")
 	beego.Router("/api/registries/:id/namespace", &api.RegistryAPI{}, "get:GetNamespace")
 
-	beego.Router("/v2/*", &controllers.RegistryProxy{}, "*:Handle")
+	beego.Router("/v2/*", &controllers.RegistryProxy{}, "*:Handle2")
 
 	// APIs for chart repository
 	if config.WithChartMuseum() {
